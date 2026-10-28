@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MANN HOSTING PANEL</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0b1120;
+      color: #e5e7eb;
+    }
+    header {
+      padding: 22px;
+      background: #111827;
+      border-bottom: 1px solid #273449;
+    }
+    header h2 { margin: 0; color: #60a5fa; }
+    main { max-width: 850px; margin: auto; padding: 22px; }
+    .welcome { color: #9ca3af; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+      gap: 14px;
+      margin: 24px 0;
+    }
+    .card {
+      background: #172033;
+      padding: 20px;
+      border: 1px solid #29364c;
+      border-radius: 12px;
+    }
+    .number { font-size: 23px; font-weight: bold; }
+    .muted { color: #9ca3af; font-size: 14px; }
+    button {
+      padding: 12px 16px;
+      background: #2563eb;
+      color: white;
+      border: 0;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .notice {
+      padding: 15px;
+      border-radius: 10px;
+      background: #202b40;
+      line-height: 1.6;
+    }
+    footer { color: #9ca3af; margin-top: 30px; font-size: 13px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>MANN HOSTING</h2>
+    <div class="muted">Dashboard Panel</div>
+  </header>
+
+  <main>
+    <h1>Dashboard</h1>
+    <p class="welcome">Selamat datang di panel hosting kamu!</p>
+
+    <div class="grid">
+      <div class="card">
+        <div class="muted">Website</div>
+        <p class="number">1</p>
+        <div class="muted">Demo dashboard</div>
+      </div>
+      <div class="card">
+        <div class="muted">Bot</div>
+        <p class="number">0</p>
+        <div class="muted">Belum terhubung</div>
+      </div>
+      <div class="card">
+        <div class="muted">Server</div>
+        <p class="number">Demo</p>
+        <div class="muted">Belum terhubung</div>
+      </div>
+    </div>
+
+    <section class="card">
+      <h3>Kelola Hosting</h3>
+      <p class="muted">
+        Ini dashboard tampilan. Belum terhubung ke server sungguhan.
+      </p>
+      <button onclick="info()">Informasi Panel</button>
+      <p id="hasil"></p>
+    </section>
+
+    <br>
+
+    <div class="notice">
+      <strong>Catatan:</strong><br>
+      Untuk menjalankan bot WhatsApp atau Node.js,
+      hubungkan panel ini ke backend dan server hosting
+      yang kamu miliki.
+    </div>
+
+    <footer>© 2026 MANN HOSTING · Dashboard Demo</footer>
+  </main>
+
+  <script>
+    function info() {
+      document.getElementById("hasil").textContent =
+        "Panel berhasil dibuka. Server belum terhubung.";
+    }
+  </script>
+</body>
+</html>
